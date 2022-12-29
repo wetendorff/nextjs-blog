@@ -3,7 +3,7 @@ import Link from "next/link";
 import Layout, { siteTitle } from "../components/layout";
 import { getSortedPostsData } from "../lib/posts";
 import utilStyles from "../styles/utils.module.css";
-import Date from "../components/date";
+import DateLocalized from "../components/DateLocalized";
 
 export default function Home({ allPostsData }) {
   return (
@@ -26,7 +26,7 @@ export default function Home({ allPostsData }) {
               <Link href={`/posts/${id}`}>{title}</Link>
               <br />
               <small className={utilStyles.lightText}>
-                <Date dateString={date} />
+                <DateLocalized dateString={date} />
               </small>
             </li>
           ))}

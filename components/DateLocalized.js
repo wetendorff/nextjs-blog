@@ -1,10 +1,9 @@
 export default function DateLocalized({ dateString }) {
   const date = new Date(dateString);
-  const dateStr = date.toLocaleDateString("da-DK", {
+  const formattedDateString = date.toLocaleDateString("da-DK", {
     year: "numeric",
     month: "long",
     day: "numeric",
   });
-
-  return <time dateTime={dateString}>{dateStr}</time>;
+  return <time dateTime={dateString}>{formattedDateString}</time>;
 }
